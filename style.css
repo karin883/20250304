@@ -1,0 +1,43 @@
+/* *代表在index.html內的所有指令<>，都會產生一個匡線匡起來 */
+*{
+    /* 產生匡線，為實心線條，粗細2px 黑色 */
+    border: solid 0.5px rgb(53, 100, 49);
+ 
+}
+html,body{
+ /* 設定背景顏色為淺灰色 */
+ background-color: rgba(255, 210, 142, 0.732);
+ /* 設定視窗的高度為100% */
+    height: 100%;
+    /* 設定視窗的寬度為100% */
+    width: 100%;
+    /* 把.box置於視窗的上下左右中間 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+ background-color: rgb(237, 252, 252);
+ /* 設定寬度為380px，且置中在視窗中間 */ 
+    width: 380px;
+    margin: 0 auto;
+
+
+}
+ .top{
+    /* 連結一個網頁的圖片 */    
+    background-image: url('https://pic.pimg.tw/sidney6811/1529508979-1559019819_n.jpg');
+    /* .top的高設定為330px,背景圖要充滿整個.top內 */
+    height: 330px;
+    background-size: cover;
+}
+.top h2{
+    /* 設定文字顏色為白色 */
+    color: white;
+    /* 設定文字位置在top的左邊 */
+    position: absolute;
+    left: 20px;
+    /* 設定文字位置在top的下方 */
+    position: relative;
+    top: 10px;
+}
