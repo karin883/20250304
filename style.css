@@ -1,12 +1,12 @@
 /* *代表在index.html內的所有指令<>，都會產生一個匡線匡起來 */
 *{
     /* 產生匡線，為實心線條，粗細2px 黑色 */
-    border: solid 0.5px rgb(53, 100, 49);
+   
  
 }
 html,body{
- /* 設定背景顏色為淺灰色 */
- background-color: rgba(255, 210, 142, 0.732);
+ /* 設定背景顏色為#f5ebe0 */
+ background-color: #f5ebe0;
  /* 設定視窗的高度為100% */
     height: 100%;
     /* 設定視窗的寬度為100% */
@@ -17,20 +17,60 @@ html,body{
     align-items: center;
 }
 .box{
- background-color: rgb(237, 252, 252);
- /* 設定寬度為380px，且置中在視窗中間 */ 
+    /* 設定背景顏色為白色 */
+    background-color: white;
+    /* 設定寬度為380px，且置中在視窗中間 */ 
     width: 380px;
     margin: 0 auto;
-
-
+    /* 設定最大寬度和最大高度為100%，以防止超出視窗 */
+    max-width: 100%;
+    max-height: 100%;
+    /* 新增右下角的黑色陰影 */
+    box-shadow: 10px 10px 10px black;
 }
+
+.box:hover {
+    /* 滑鼠移入時往左上角移動10px */
+    transform: translate(-10px, -10px);
+}
+
  .top{
     /* 連結一個網頁的圖片 */    
     background-image: url('https://pic.pimg.tw/sidney6811/1529508979-1559019819_n.jpg');
     /* .top的高設定為330px,背景圖要充滿整個.top內 */
     height: 330px;
     background-size: cover;
+    /* 新增一個圓形的div */
+    position: relative;
 }
+
+.top .circle {
+    /* 設定圓形的顏色為#023047 */
+    background-color: #023047;
+    /* 設定寬高為50px */
+    width: 50px;
+    height: 50px;
+    /* 設定為圓形 */
+    border-radius: 50%;
+    /* 設定位置 */
+    position: absolute;
+    right: 50px;
+    bottom: -25px;
+}
+
+.top .rectangle {
+    /* 設定方形的顏色為#023047 */
+    background-color: #023047;
+    /* 設定寬度為25px */
+    width: 25px;
+    /* 設定高度為50px */
+    height: 50px;
+    /* 設定位置 */
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
 .top h2{
     /* 設定文字顏色為白色 */
     color: white;
@@ -40,4 +80,53 @@ html,body{
     /* 設定文字位置在top的下方 */
     position: relative;
     top: 10px;
+    /* 文字後面產生一個黑色背景，透明度為0.4 */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* 設定背景寬度與文字寬度相同 */
+    display: inline-block;
+    /* 設定最大寬度為100%，以防止背景超出視窗 */
+    max-width: 100%;
+}
+
+.bottom ul {
+    /* 刪除項目符號 */
+    list-style-type: none;
+    padding: 3px;
+    /* 設定靠左外距為5px */
+    margin-left: 5px;
+    /* 設定靠上方距離為15px */
+    margin-top: 25px;
+    /* 設定行距5px */
+    line-height: 30px;
+    
+}
+
+
+
+.btn, .btnnews {
+    /* 設定背景顏色為#003049 */
+    background-color: #003049;
+    /* 設定文字顏色為白色 */
+    color: white;
+    /* 設定內距 */
+    padding: 10px 20px;
+    /* 設定邊框為圓角 */
+    border-radius: 5px;
+    /* 設定文字置中 */
+    text-align: center;
+    /* 設定顯示為inline-block */
+    display: inline-block;
+    /* 設定外距 */
+    margin: 5px;
+    /* 設定游標為指標 */
+    cursor: pointer;
+    /* 移除預設邊框 */
+    border: none;
+    /* 設定文字裝飾為無 */
+    text-decoration: none;
+}
+
+.btn:hover, .btnnews:hover {
+    /* 設定背景顏色為較深的色調 */
+    background-color: #002635;
 }
